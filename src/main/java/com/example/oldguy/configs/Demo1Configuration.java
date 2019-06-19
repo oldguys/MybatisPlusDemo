@@ -52,13 +52,11 @@ public class Demo1Configuration extends AbstractMybatisPlusConfiguration {
                 null,
                 null,
                 applicationContext);
-//        return null;
     }
 
     @Bean(name = "demo1SqlSessionTemplate")
     public SqlSessionTemplate sqlSessionTemplate(@Qualifier("demo1MybatisPlusProperties") MybatisPlusProperties properties,
                                                  @Qualifier("demo1SqlSessionFactory") SqlSessionFactory sqlSessionFactory) {
         return getSqlSessionTemplate(sqlSessionFactory, properties);
-//        return null;
     }
 }
